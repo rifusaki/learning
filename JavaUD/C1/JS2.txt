@@ -1,0 +1,44 @@
+// write your code here
+var img = new SimpleImage('smalllion.jpg');
+
+for (var pxl of img.values()) {
+    if (pxl.getX() <= img.getWidth()/3) {
+        pxl.setRed(255);
+    }
+    else if (pxl.getX()-img.getWidth()/3 <= img.getWidth()/3) {
+        pxl.setGreen(255);
+    }
+    else {
+        pxl.setBlue(255);
+    }
+}
+print(img);
+
+// Parte 2
+var img2 = new SimpleImage('eastereggs.jpg');
+print(img2);
+
+function cabra(x) {
+    for (var px of x.values()) {
+        nroj = px.getRed()
+        nver = px.getGreen()
+        px.setRed(nver)
+        px.setGreen(nroj)
+    }
+    return x
+}
+
+print(cabra(img2))
+
+// Parte 3
+var img3 = new SimpleImage('duke_blue_devil.png');
+
+for (var pxl of img3.values()) {
+    if (pxl.getRed() != 255) {
+        pxl.setRed(255);
+        pxl.setGreen(255);
+        pxl.setBlue(9);
+    }
+}
+
+print(img3);

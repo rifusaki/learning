@@ -1,0 +1,14 @@
+var fi = new SimpleImage('drewRobert.png');
+var bi = new SimpleImage('dinos.png');
+var oi = new SimpleImage(fi.getWidth(), fi.getHeight());
+
+for (var x of fi.values()) {
+    if (x.getGreen() > x.getRed() + x.getBlue()) {
+        oi.setPixel(x.getX(), x.getY(), bi.getPixel(x.getX(), x.getY()));
+    }
+    else {
+        oi.setPixel(x.getX(), x.getY(), x);
+    }
+}
+
+print(oi);

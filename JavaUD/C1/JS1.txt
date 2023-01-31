@@ -1,0 +1,28 @@
+// Variables y métodos
+var x = 3;
+var y = 4;
+var z = x + 2*y;
+
+print(x,y,z,'\n');
+
+var fotojaja = new SimpleImage('smalluniverse.jpg');
+print(fotojaja);
+
+print('Dimensiones:',fotojaja.getWidth(),'x',fotojaja.getHeight());
+
+print('Pixel (120,100):',fotojaja.getPixel(120,100)); // Sirve también getRed, getGreen y getBlue
+
+// Funciones
+function sq(x){
+	var ans = x*x;
+	return ans;
+}
+var a = sq(1909);
+print(a)
+
+// Lo mismo del 13
+function dim(a) {
+    return a.getWidth() a.getHeight()
+}
+
+print(dim(fotojaja))
