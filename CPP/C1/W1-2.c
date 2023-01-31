@@ -19,21 +19,15 @@ int main(void) {
     printf("\nA marathon is %lf kilometers.\n", kilometers);
     return 0;
  }
-
-int main(void)  {
-    int a = 3, b = 4, c = -2;
-    int res = ++a + b++;
-    printf(res);
-    return 0;
 }*/
 
 #define PI 3.14159
+
 int main(void)
 { 
- double radius;
- printf("Enter radius:");
- scanf("%g", &radius);
- printf(radius);
- printf("volume is : %g \n\n", 4*radius*radius*radius/3 );
+ double radius = 0.0;
+ printf("Enter radius: ");
+ scanf("%lf", &radius);
+ printf("volume is : %lf \n\n", 4*PI*radius*radius*radius/3.0 );
 return 0;
 }
