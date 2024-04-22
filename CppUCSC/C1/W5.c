@@ -1,3 +1,9 @@
+/*
+Average of an array of an arbitrary number of ints stored as string separated by tabs.
+To-Do:
+- Read directly from file
+*/
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
