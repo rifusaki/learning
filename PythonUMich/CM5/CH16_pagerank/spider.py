@@ -15,17 +15,11 @@ conn = sqlite3.connect('spider.sqlite')
 cur = conn.cursor()
 
 cur.execute('''CREATE TABLE IF NOT EXISTS Pages
-    (id INTEGER PRIMARY KEY,
-    url TEXT UNIQUE,
-    html TEXT,
-    error INTEGER,
-    old_rank REAL,
-    new_rank REAL)''')
+    (id INTEGER PRIMARY KEY, url TEXT UNIQUE, html TEXT,
+     error INTEGER, old_rank REAL, new_rank REAL)''')
 
 cur.execute('''CREATE TABLE IF NOT EXISTS Links
-    (from_id INTEGER,
-    to_id INTEGER,
-    UNIQUE(from_id, to_id))''')
+    (from_id INTEGER, to_id INTEGER, UNIQUE(from_id, to_id))''')
 
 cur.execute('''CREATE TABLE IF NOT EXISTS Webs (url TEXT UNIQUE)''')
 
