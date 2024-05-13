@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+}
+
+.select-wrapper select {
+  content: "aaa";
+  appearance: none;
+  background-color: rgb(235, 197, 140);
+  color: rgb(95, 80, 58);
+  /* padding: 10px; */
+  font-size: 16px;
+  border: 1px solid rgb(180, 151, 106);
+  border-radius: 4px;
+  flex-grow: 1; /* This will make the select element take up the remaining space */
+}
+
+.budgetButton {
+  background-color: rgb(230, 230, 230);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(139, 139, 139);
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 3px;
+  cursor: pointer;
+}
